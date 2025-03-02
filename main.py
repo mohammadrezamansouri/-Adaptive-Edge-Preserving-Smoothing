@@ -79,7 +79,7 @@ root.configure(bg="white")
 
 
 try:
-    pil_image = Image.open("E:\github\Adaptive-Edge-Preserving-Smoothing\original.gif")
+    pil_image = Image.open("E:\github\Adaptive-Edge-Preserving-Smoothing\standard_test_images\original.gif")
     frames = [ImageTk.PhotoImage(frame.copy().convert("RGBA"), master=root) 
               for frame in ImageSequence.Iterator(pil_image)]
 except Exception as e:
