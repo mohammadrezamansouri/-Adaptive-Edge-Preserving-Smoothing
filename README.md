@@ -1,4 +1,4 @@
-# -Adaptive Edge-Preserving Smoothing Filter Implementation  
+# Adaptive Edge-Preserving Smoothing Filter Implementation  
 
 This project is a Python implementation of the *"Intensity and Scale Adjustable Edge-Preserving Smoothing Filter"* by Kazu Mishiba. The method improves traditional edge-preserving filters by introducing real-time control over both edge intensity and scale. By utilizing a novel variance-based metric, it effectively smooths textures while preserving significant edges, making it suitable for real-time image processing applications.  
 
