@@ -1,6 +1,10 @@
 import numpy as np
 from scipy.ndimage import convolve
 
+
+
+
+
 def ubf(img, s):
     """
     Applies a uniform box filter with symmetric padding to the image.
@@ -14,6 +18,8 @@ def ubf(img, s):
         for c in range(img.shape[2]):
             out[..., c] = convolve(img[..., c], kernel, mode='reflect')
         return out 
+
+
 
 def ISESFilter(x, s, p, e):
     """
@@ -34,7 +40,12 @@ def ISESFilter(x, s, p, e):
     # Compute the mean (mu) within each patch
     mu = ubf(x, s) / (s**2)
 
+
+
+
     # Compute the variance within each patch
+
+    
     if x.ndim == 3:  # Color image
         x2 = x**2
         mu_x2 = ubf(x2, s) / (s**2)

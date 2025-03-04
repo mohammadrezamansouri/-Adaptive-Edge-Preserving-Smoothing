@@ -5,6 +5,9 @@ from tkinter import Tk, Label, Entry, Button, filedialog, StringVar, Frame
 from PIL import Image, ImageTk, ImageSequence
 from ises_filter import ISESFilter
 
+
+
+
 def run_filter():
    
     try:
@@ -55,6 +58,8 @@ def run_filter():
     plt.tight_layout(pad=2.0)
     plt.show()
 
+
+
 def select_image():
    
     file_path = filedialog.askopenfilename(
@@ -65,6 +70,8 @@ def select_image():
         image_path_var.set(file_path)
         image_label.config(text=file_path)
 
+
+
 def update_gif(frame_index):
     
     frame = frames[frame_index]
@@ -73,9 +80,12 @@ def update_gif(frame_index):
     root.after(100, update_gif, frame_index)
 
 
+
+
 root = Tk()
 root.title("ISES Filter User Interface")
 root.configure(bg="white")
+
 
 
 try:
@@ -125,5 +135,8 @@ reg_param_entry.grid(row=2, column=1, padx=5, pady=5)
 
 apply_button = Button(root, text="Apply ISES Filter", command=run_filter, bg="light green")
 apply_button.pack(pady=10)
+Label(root, text="Created by Mohammad Reza Mansouri", bg="white", fg="black", font=("Arial", 10)).pack(pady=10)
+
+
 
 root.mainloop()
